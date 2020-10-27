@@ -23,7 +23,6 @@
                     {
                         "name": "appGatewayIpConfig",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/gatewayIPConfigurations/appGatewayIpConfig",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "subnet": {
@@ -41,7 +40,6 @@
                     {
                         "name": "appGwPublicFrontendIp",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/frontendIPConfigurations/appGwPublicFrontendIp",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
                         "properties": {
                             "provisioningState": "Succeeded",
@@ -49,7 +47,6 @@
                             "publicIPAddress": {
                                 "name": "25Oct20AppGwPIP",
                                 "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/publicIPAddresses/25Oct20AppGwPIP",
-                                "etag": "W/\"165b1376-d286-44a6-b728-00354ba3eaec\"",
                                 "location": "australiacentral",
                                 "properties": {
                                     "provisioningState": "Succeeded",
@@ -80,7 +77,6 @@
                     {
                         "name": "port_80",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/frontendPorts/port_80",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "port": 80,
@@ -97,7 +93,6 @@
                     {
                         "name": "BackendPool1stuarteggerton.com",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendAddressPools/BackendPool1stuarteggerton.com",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "backendAddresses": [
@@ -121,7 +116,6 @@
                     {
                         "name": "backendpool2",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendAddressPools/backendpool2",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "backendAddresses": [
@@ -155,7 +149,6 @@
                     {
                         "name": "httpsettings1",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendHttpSettingsCollection/httpsettings1",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "port": 443,
@@ -180,7 +173,6 @@
                     {
                         "name": "httpsetting2",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendHttpSettingsCollection/httpsetting2",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "port": 443,
@@ -205,7 +197,6 @@
                     {
                         "name": "Listener1",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/httpListeners/Listener1",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "frontendIPConfiguration": {
@@ -230,7 +221,6 @@
                     {
                         "name": "Rule1",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "defaultBackendAddressPool": {
@@ -243,7 +233,6 @@
                                 {
                                     "name": "target2",
                                     "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/target2",
-                                    "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                                     "properties": {
                                         "provisioningState": "Succeeded",
                                         "paths": [
@@ -261,7 +250,6 @@
                                 {
                                     "name": "stutarget",
                                     "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/stutarget",
-                                    "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                                     "properties": {
                                         "provisioningState": "Succeeded",
                                         "paths": [
@@ -293,7 +281,6 @@
                     {
                         "name": "Rule1",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/requestRoutingRules/Rule1",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "ruleType": "PathBasedRouting",
@@ -311,7 +298,6 @@
                     {
                         "name": "httpsetting2cfa7f137-5b4f-46b2-a097-555666267037",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/probes/httpsetting2cfa7f137-5b4f-46b2-a097-555666267037",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "protocol": "Https",
@@ -335,7 +321,6 @@
                     {
                         "name": "rewrite1",
                         "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/rewriteRuleSets/rewrite1",
-                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
                         "properties": {
                             "provisioningState": "Succeeded",
                             "rewriteRules": [
@@ -355,7 +340,7 @@
                                         "responseHeaderConfigurations": [
                                             {
                                                 "headerName": "Location",
-                                                "headerValue": "{http_resp_Location_1}www.bing.comMAGICTEXT{http_resp_Location_3}"
+                                                "headerValue": "{http_resp_Location_1}www.bing.com{http_resp_Location_3}"
                                             }
                                         ]
                                     }
