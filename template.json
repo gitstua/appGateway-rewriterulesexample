@@ -1,0 +1,379 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/applicationGateways",
+            "apiVersion": "2019-09-01",
+            "name": "StuExampleAppGw",
+            "location": "australiacentral",
+            "dependsOn": [],
+            "tags": {},
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "cbb3c43c-7060-44b0-b7d3-636407aaeccd",
+                "sku": {
+                    "name": "Standard_v2",
+                    "tier": "Standard_v2",
+                    "capacity": 2
+                },
+                "operationalState": "Running",
+                "gatewayIPConfigurations": [
+                    {
+                        "name": "appGatewayIpConfig",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/gatewayIPConfigurations/appGatewayIpConfig",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "subnet": {
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/virtualNetworks/StuExampleAppGwVNet/subnets/subnet1"
+                            }
+                        },
+                        "type": "Microsoft.Network/applicationGateways/gatewayIPConfigurations"
+                    }
+                ],
+                "sslCertificates": [],
+                "trustedRootCertificates": [],
+                "trustedClientCertificates": [],
+                "sslProfiles": [],
+                "frontendIPConfigurations": [
+                    {
+                        "name": "appGwPublicFrontendIp",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/frontendIPConfigurations/appGwPublicFrontendIp",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "name": "25Oct20AppGwPIP",
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/publicIPAddresses/25Oct20AppGwPIP",
+                                "etag": "W/\"165b1376-d286-44a6-b728-00354ba3eaec\"",
+                                "location": "australiacentral",
+                                "properties": {
+                                    "provisioningState": "Succeeded",
+                                    "resourceGuid": "80898c3a-822b-4981-845e-71c5cea85ec2",
+                                    "ipAddress": "20.39.64.75",
+                                    "publicIPAddressVersion": "IPv4",
+                                    "publicIPAllocationMethod": "Static",
+                                    "idleTimeoutInMinutes": 4,
+                                    "ipTags": [],
+                                    "ipConfiguration": {
+                                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/frontendIPConfigurations/appGwPublicFrontendIp"
+                                    }
+                                },
+                                "type": "Microsoft.Network/publicIPAddresses",
+                                "sku": {
+                                    "name": "Standard"
+                                }
+                            },
+                            "httpListeners": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/httpListeners/Listener1"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "frontendPorts": [
+                    {
+                        "name": "port_80",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/frontendPorts/port_80",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "port": 80,
+                            "httpListeners": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/httpListeners/Listener1"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/frontendPorts"
+                    }
+                ],
+                "backendAddressPools": [
+                    {
+                        "name": "BackendPool1stuarteggerton.com",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendAddressPools/BackendPool1stuarteggerton.com",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "backendAddresses": [
+                                {
+                                    "fqdn": "stuarteggerton.com"
+                                }
+                            ],
+                            "urlPathMaps": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1"
+                                }
+                            ],
+                            "pathRules": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/stutarget"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/backendAddressPools"
+                    },
+                    {
+                        "name": "backendpool2",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendAddressPools/backendpool2",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "backendAddresses": [
+                                {
+                                    "fqdn": "www.microsoft.com"
+                                }
+                            ],
+                            "pathRules": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/target2"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/backendAddressPools"
+                    },
+                    {
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendAddressPools/example3",
+                        "name": "example3",
+                        "properties": {
+                            "backendAddresses": [
+                                {
+                                    "ipAddress": null,
+                                    "fqdn": "www.auazug.com"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "loadDistributionPolicies": [],
+                "backendHttpSettingsCollection": [
+                    {
+                        "name": "httpsettings1",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendHttpSettingsCollection/httpsettings1",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "port": 443,
+                            "protocol": "Https",
+                            "cookieBasedAffinity": "Disabled",
+                            "pickHostNameFromBackendAddress": true,
+                            "path": "/",
+                            "requestTimeout": 20,
+                            "urlPathMaps": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1"
+                                }
+                            ],
+                            "pathRules": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/stutarget"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+                    },
+                    {
+                        "name": "httpsetting2",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendHttpSettingsCollection/httpsetting2",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "port": 443,
+                            "protocol": "Https",
+                            "cookieBasedAffinity": "Disabled",
+                            "pickHostNameFromBackendAddress": true,
+                            "path": "/",
+                            "requestTimeout": 20,
+                            "probe": {
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/probes/httpsetting2cfa7f137-5b4f-46b2-a097-555666267037"
+                            },
+                            "pathRules": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/target2"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+                    }
+                ],
+                "httpListeners": [
+                    {
+                        "name": "Listener1",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/httpListeners/Listener1",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "frontendIPConfiguration": {
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/frontendIPConfigurations/appGwPublicFrontendIp"
+                            },
+                            "frontendPort": {
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/frontendPorts/port_80"
+                            },
+                            "protocol": "Http",
+                            "hostNames": [],
+                            "requireServerNameIndication": false,
+                            "requestRoutingRules": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/requestRoutingRules/Rule1"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/httpListeners"
+                    }
+                ],
+                "urlPathMaps": [
+                    {
+                        "name": "Rule1",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "defaultBackendAddressPool": {
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendAddressPools/BackendPool1stuarteggerton.com"
+                            },
+                            "defaultBackendHttpSettings": {
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendHttpSettingsCollection/httpsettings1"
+                            },
+                            "pathRules": [
+                                {
+                                    "name": "target2",
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/target2",
+                                    "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                                    "properties": {
+                                        "provisioningState": "Succeeded",
+                                        "paths": [
+                                            "/example"
+                                        ],
+                                        "backendAddressPool": {
+                                            "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendAddressPools/backendpool2"
+                                        },
+                                        "backendHttpSettings": {
+                                            "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendHttpSettingsCollection/httpsetting2"
+                                        }
+                                    },
+                                    "type": "Microsoft.Network/applicationGateways/urlPathMaps/pathRules"
+                                },
+                                {
+                                    "name": "stutarget",
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/stutarget",
+                                    "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                                    "properties": {
+                                        "provisioningState": "Succeeded",
+                                        "paths": [
+                                            "/stu"
+                                        ],
+                                        "backendAddressPool": {
+                                            "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendAddressPools/BackendPool1stuarteggerton.com"
+                                        },
+                                        "backendHttpSettings": {
+                                            "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendHttpSettingsCollection/httpsettings1"
+                                        },
+                                        "rewriteRuleSet": {
+                                            "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/rewriteRuleSets/rewrite1"
+                                        }
+                                    },
+                                    "type": "Microsoft.Network/applicationGateways/urlPathMaps/pathRules"
+                                }
+                            ],
+                            "requestRoutingRules": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/requestRoutingRules/Rule1"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/urlPathMaps"
+                    }
+                ],
+                "requestRoutingRules": [
+                    {
+                        "name": "Rule1",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/requestRoutingRules/Rule1",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "ruleType": "PathBasedRouting",
+                            "httpListener": {
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/httpListeners/Listener1"
+                            },
+                            "urlPathMap": {
+                                "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1"
+                            }
+                        },
+                        "type": "Microsoft.Network/applicationGateways/requestRoutingRules"
+                    }
+                ],
+                "probes": [
+                    {
+                        "name": "httpsetting2cfa7f137-5b4f-46b2-a097-555666267037",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/probes/httpsetting2cfa7f137-5b4f-46b2-a097-555666267037",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "Https",
+                            "path": "/",
+                            "interval": 30,
+                            "timeout": 30,
+                            "unhealthyThreshold": 3,
+                            "pickHostNameFromBackendHttpSettings": true,
+                            "minServers": 0,
+                            "match": {},
+                            "backendHttpSettings": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/backendHttpSettingsCollection/httpsetting2"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/probes"
+                    }
+                ],
+                "rewriteRuleSets": [
+                    {
+                        "name": "rewrite1",
+                        "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/rewriteRuleSets/rewrite1",
+                        "etag": "W/\"7469a5c6-6371-4292-97b1-0a7ba2c53f30\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "rewriteRules": [
+                                {
+                                    "ruleSequence": 100,
+                                    "conditions": [
+                                        {
+                                            "variable": "http_resp_Location",
+                                            "pattern": "(https?:.*)(www\\.microsoft\\.com)(.*)",
+                                            "ignoreCase": true,
+                                            "negate": false
+                                        }
+                                    ],
+                                    "name": "NewRewrite",
+                                    "actionSet": {
+                                        "requestHeaderConfigurations": [],
+                                        "responseHeaderConfigurations": [
+                                            {
+                                                "headerName": "Location",
+                                                "headerValue": "{http_resp_Location_1}www.bing.comMAGICTEXT{http_resp_Location_3}"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "pathRules": [
+                                {
+                                    "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw/urlPathMaps/Rule1/pathRules/stutarget"
+                                }
+                            ]
+                        },
+                        "type": "Microsoft.Network/applicationGateways/rewriteRuleSets"
+                    }
+                ],
+                "redirectConfigurations": [],
+                "enableHttp2": false
+            },
+            "id": "/subscriptions/e7752f09-24a1-4b14-0000-aaaabbbbcccc/resourceGroups/StuExampleAppGw/providers/Microsoft.Network/applicationGateways/StuExampleAppGw"
+        }
+    ]
+}
